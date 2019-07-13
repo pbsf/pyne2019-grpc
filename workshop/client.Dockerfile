@@ -23,6 +23,4 @@ RUN touch /client/google/__init__.py \
 
 RUN pip install --no-cache-dir -r ./requirements.txt
 
-EXPOSE 9000
-
 CMD ["python", "-u", "client.py"]
