@@ -7,7 +7,7 @@ def SayHello(text):
     with grpc.insecure_channel('greeter:3000') as channel:
         stub = greeter_pb2_grpc.GreeterStub(channel)
         response = stub.SayHello(greeter_pb2.HelloRequest(name=text))
-        print(response)
+        print(response.greetings)
 
 if __name__ == '__main__':
     SayHello('dev')

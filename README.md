@@ -2,10 +2,14 @@
 
 # gRPC - Alternativa à REST utilizada pelo Google e Netflix para intercomunicação de serviços
 
-Para realizar o tutorial clone o repositório, abra o seu editor de texto favorito, e abra pelo menos
-duas janelas de terminal.
+Pré-requisitos para realizar o tutorial:
+1. Ter git, docker e docker-compose instalados na sua máquina.
+2. Clonar esse repositório.
+3. Executar o script `pull-images.sh`.
+4. Abrir seu editor de texto favorito, e pelo menos duas janelas de terminal.
 
-O serviço `Greeter` está definido no arquivo `protos/pyne/greeter.proto`. Esse serviço contém a função `SayHello`.
+O serviço `Greeter` está definido no arquivo `protos/pyne/greeter.proto`. Esse serviço contém o RPC `SayHello`,
+que recebe uma mensagem com um nome, e retorna uma mensagem com .
 
 Testando o `Greeter`:
 ```
@@ -20,7 +24,7 @@ Saída esperada no terminal do servidor:
 $ greeter_1  | dev said Hello.
 
 Saida esperada no terminal do cliente:
-$ client_1  | message: "Hello, dev."
+$ client_1  | Hello, dev.
 ```
 
 ## Atividade 1:
