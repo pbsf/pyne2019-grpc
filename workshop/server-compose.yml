@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  greeter:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
+    image: pyne/greeter
+    networks:
+      - pynenet
+    ports:
+      - 3000
+
+networks:
+  pynenet:
+
