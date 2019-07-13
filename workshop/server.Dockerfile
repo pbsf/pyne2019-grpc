@@ -11,8 +11,6 @@ RUN python -m grpc_tools.protoc \
     --grpc_python_out=/server \
     /protos/pyne/greeter.proto
 
-RUN pip install --no-cache-dir -r ./requirements.txt
-
 EXPOSE 3000
 
 CMD ["python", "-u", "service.py"]

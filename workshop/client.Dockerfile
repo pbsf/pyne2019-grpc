@@ -11,6 +11,4 @@ RUN python -m grpc_tools.protoc \
     --grpc_python_out=/client \
     /protos/pyne/greeter.proto
 
-RUN pip install --no-cache-dir -r ./requirements.txt
-
 CMD ["python", "-u", "client.py"]
