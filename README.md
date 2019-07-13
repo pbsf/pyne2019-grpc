@@ -8,6 +8,8 @@ Pré-requisitos para realizar o tutorial:
 3. Executar o script `pull-images.sh`.
 4. Abrir seu editor de texto favorito, e pelo menos duas janelas de terminal.
 
+A infra-estrutura desse tutorial utiliza docker. Porém, como o foco do tutorial é gRPC, iremos abstrair todos os arquivos com terminação .yml e .Dockerfile desse repositório -- eles podem ser ignorados.
+
 O serviço `Greeter` está definido no arquivo `protos/pyne/greeter.proto`. Esse serviço contém o RPC `SayHello`,
 que recebe uma mensagem com um nome, e retorna uma mensagem de boas vindas.
 
