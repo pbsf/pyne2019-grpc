@@ -2,14 +2,16 @@
 
 # gRPC - Alternativa à REST utilizada pelo Google e Netflix para intercomunicação de serviços
 
-Pré-requisitos para realizar o tutorial:
+## Pré-requisitos
 1. Ter git, docker e docker-compose instalados em sua máquina.
 2. Clonar esse repositório.
 3. Executar o script `pull-images.sh`.
 4. Abrir seu editor de texto favorito, e pelo menos duas janelas de terminal.
 
+## Observação
 A infra-estrutura desse tutorial utiliza docker. Porém, como o foco do tutorial é gRPC, iremos abstrair essa infra. Apenas as pastas `client`, `protos` e `server` serão alteradas nesse tutorial.
 
+## Introdução
 O serviço `Greeter` está definido no arquivo `protos/pyne/greeter.proto`. Esse serviço contém o RPC `SayHello`,
 que recebe uma mensagem com um nome, e retorna uma mensagem de boas vindas.
 
