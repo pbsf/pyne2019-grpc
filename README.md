@@ -12,7 +12,7 @@
 A infra-estrutura desse tutorial utiliza docker. Porém, como o foco do tutorial é gRPC, iremos abstrair essa infra. Apenas as pastas `client`, `protos` e `server` serão alteradas nesse tutorial.
 
 ## Introdução
-O serviço `Greeter` está definido no arquivo `protos/pyne/greeter.proto`. Esse serviço contém o RPC `SayHello`,
+O serviço `Greeter` está definido no arquivo `protos/pyne.proto`. Esse serviço contém o RPC `SayHello`,
 que recebe uma mensagem com um nome, e retorna uma mensagem de boas vindas.
 
 Testando o `Greeter`:
@@ -34,9 +34,15 @@ $ client_1  | Hello, dev.
 Modifique o código do cliente para que ao invés do termo genérico "dev", o `Greeter` dê as boas vindas para você.
 
 ## Atividade 2:
-Modifique o `greeter.proto` adicionando um parâmetro de idade ao `HelloRequest`. Você pode usar o tipo `int32` para isso.
+Modifique `pyne.proto` adicionando um parâmetro de idade ao `HelloRequest`. Você pode usar o tipo `int32` para isso.
 Rode o cliente novamente para ter certeza de que nada quebrou.
 
 ## Atividade 3:
 Modifique o código do cliente e do servidor para que o `Greeter` além de dar as boas vindas para você, informe também a sua idade.
 Por exemplo: `Hello, Paulo. I heard you are 29.`
+
+## Atividade 4:
+Modifique `pyne.proto` adicionando um novo serviço: `Calculator`. Esse serviço deve conter um RPC chamado `Sum`, que recebe como entrada uma mensagem `SumRequest`, que contém dois inteiros, e retorna um `SumResponse`, que contém apenas um inteiro.
+
+## Atividade 5:
+Implemente a lógica do serviço `CalculatorService` no servidor. Altere o cliente para validar o seu serviço.

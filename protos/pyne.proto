@@ -12,3 +12,16 @@ message HelloRequest {
 message HelloReply {
   string greetings = 1;
 }
+
+service Calculator {
+  rpc Sum (SumRequest) returns (SumResponse) {}
+}
+
+message SumRequest {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message SumResponse {
+  int32 c = 1;
+}
