@@ -12,6 +12,3 @@ message HelloRequest {
 message HelloReply {
   string greetings = 1;
 }
-
-
-
