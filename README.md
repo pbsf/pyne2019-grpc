@@ -76,5 +76,8 @@ Note a regra `stream`, isso significa que ao chamar essa função a conexão se 
 ## Atividade 8:
 Altere `Ntp.UtcNow` para o modo de stream bi-direcional: `rpc UtcNow (stream UtcNowRequest) returns (stream UtcNowResponse)`. O servidor deve funcionar como antes, porém agora deve sempre atualizar `interval_in_secs` e `max_amount` para os últimos valores recebidos. Você pode utilizar um console iterativo no cliente para atualizar esses valores, enquanto uma outra thread imprime os resultados do servidor.
 
-## Opcional - Atividade 9:
+## Opcional 1:
+Implemente um cliente em outra linguagem (Go ou Javascript são mais simples), e faça ele se comunicar com os serviços criados anteriormente.
+
+## Opcional 2:
 Implemente um aplicativo de chat utilizando gRPC. Você pode se basear em https://github.com/melledijkstra/python-grpc-chat. Teste com vários clientes na mesma máquina.
