@@ -1,0 +1,14 @@
+version: "3.4"
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    image: pyne/client
+    networks:
+      - pynenet
+
+networks:
+  pynenet:
+
