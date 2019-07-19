@@ -1,4 +1,4 @@
-# Tutorial PYNE 2019
+# Tutorial PyNE 2019
 
 # gRPC - Alternativa à REST utilizada pelo Google e Netflix para intercomunicação de serviços
 
